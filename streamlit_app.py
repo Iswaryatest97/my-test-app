@@ -43,9 +43,22 @@
 import streamlit as st
 import numpy as np
 
+# Custom CSS to style the chat input
+custom_css = """
+<style>
+/* Example of customizing input boxes */
+.st-emotion-cache-arzcut {
+    padding-bottom : 15px;
+}
+</style>
+"""
+
+# Inject the custom CSS into the Streamlit app
+st.markdown(custom_css, unsafe_allow_html=True)
+
 message = st.chat_message("assistant")
 message.write("Hello human")
 
 prompt = st.chat_input("Say something")
 if prompt:
-    st.write(f"User has sent the following prompt: {prompt}")
+    st.write("User has sent the following prompt: {prompt}")
