@@ -42,7 +42,7 @@
 
 import streamlit as st
 import numpy as np
-
+import simpleCalc
 # Custom CSS to style the chat input
 custom_css = """
 <style>
@@ -61,4 +61,4 @@ message.write("Hello human")
 
 prompt = st.chat_input("Say something")
 if prompt:
-    st.write("User has sent the following prompt: {prompt}")
+    st.write(f"User has sent the following prompt: {prompt}")
