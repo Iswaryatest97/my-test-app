@@ -5,12 +5,12 @@
     "codespaces": {
       "openFiles": [
         "README.md",
-        "salesforce_case_app.py"
+        "streamlit_app.py"
       ]
     }
   },
   "postAttachCommand": {
-    "server": "streamlit run salesforce_case_app.py --server.enableCORS false --server.enableXsrfProtection false"
+    "server": "streamlit run streamlit_app.py --server.enableCORS false --server.enableXsrfProtection false"
   },
   "portsAttributes": {
     "8501": {
