@@ -70,7 +70,7 @@ with st.form('case_form'):
 
 # Handle form submission
 if submitted:
-    if subject and description:
+    if subject:
         try:
             case = create_salesforce_case(subject, description, origin, status)
             st.success(f"Case created successfully! Case ID: {case['id']}")
