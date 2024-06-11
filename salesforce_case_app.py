@@ -9,6 +9,10 @@ consumer_secret = getEnvironmentDataByKey("CONSUMER_SECRET")
 token_url = getEnvironmentDataByKey("AUTH_TOKEN_URL") # OAuth 2.0 token endpoint
 grant_type = getEnvironmentDataByKey("GRANT_TYPE")
 
+print("consumer_key***"+consumer_key)
+print("consumer_secret***"+consumer_secret)
+print("token_url***"+token_url)
+
 if not consumer_key or not consumer_secret or not token_url:
     raise ValueError("Salesforce credentials are not set in environment variables")
 
