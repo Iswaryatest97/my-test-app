@@ -1,6 +1,7 @@
 altair
 pandas
+streamlit
 openai
 dotenv
 simple_salesforce
-streamlit
+
