@@ -40,34 +40,35 @@
 #     ))
 
 
-import streamlit as st
-from openai_App import ask_gpt 
-#import simpleCalc
-# Custom CSS to style the chat input
-custom_css = """
-<style>
-/* Example of customizing input boxes */
-.st-emotion-cache-arzcut {
-    padding-bottom : 15px;
-}
-</style>
-"""
+# import streamlit as st
+# from openai_App import ask_gpt 
+# #import simpleCalc
+# # Custom CSS to style the chat input
+# custom_css = """
+# <style>
+# /* Example of customizing input boxes */
+# .st-emotion-cache-arzcut {
+#     padding-bottom : 15px;
+# }
+# </style>
+# """
 
-# Inject the custom CSS into the Streamlit app
-st.markdown(custom_css, unsafe_allow_html=True)
+# # Inject the custom CSS into the Streamlit app
+# st.markdown(custom_css, unsafe_allow_html=True)
 
-# message = st.chat_message("assistant")
-# message.write("Hello human")
+# # message = st.chat_message("assistant")
+# # message.write("Hello human")
 
-prompt = st.chat_input("Say something")
+# prompt = st.chat_input("Say something")
 
-messages=[
-    {"role": "system", "content": "Hi, How can I assist you?"},
-]
+# messages=[
+#     {"role": "system", "content": "Hi, How can I assist you?"},
+# ]
 
-reply = ask_gpt(prompt, messages)
-messages.append({
-    "role": "assistant", "content": reply
-})
-print(reply)
+# reply = ask_gpt(prompt, messages)
+# messages.append({
+#     "role": "assistant", "content": reply
+# })
+# print(reply)
 
+import salesforce_case_App

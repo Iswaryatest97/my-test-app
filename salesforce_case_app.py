@@ -1,8 +1,8 @@
 import streamlit as st
+from openai_App import getEnvironmentDataByKey
 import requests
 
 from simple_salesforce import Salesforce, SalesforceAuthenticationFailed
-from openai_App import getEnvironmentDataByKey
 
 consumer_key = getEnvironmentDataByKey("CONSUMER_KEY")
 consumer_secret = getEnvironmentDataByKey("CONSUMER_SECRET")
