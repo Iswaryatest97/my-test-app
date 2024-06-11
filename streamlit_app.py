@@ -41,8 +41,8 @@
 
 
 import streamlit as st
-import numpy as np
-import simpleCalc
+from openai_App import ask_gpt 
+#import simpleCalc
 # Custom CSS to style the chat input
 custom_css = """
 <style>
@@ -56,9 +56,18 @@ custom_css = """
 # Inject the custom CSS into the Streamlit app
 st.markdown(custom_css, unsafe_allow_html=True)
 
-message = st.chat_message("assistant")
-message.write("Hello human")
+# message = st.chat_message("assistant")
+# message.write("Hello human")
 
 prompt = st.chat_input("Say something")
-if prompt:
-    st.write(f"User has sent the following prompt: {prompt}")
+
+messages=[
+    {"role": "system", "content": "Hi, How can I assist you?"},
+]
+
+reply = ask_gpt(prompt, messages)
+messages.append({
+    "role": "assistant", "content": reply
+})
+print(reply)
+
