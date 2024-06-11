@@ -4,28 +4,19 @@ import requests
 from simple_salesforce import Salesforce, SalesforceAuthenticationFailed
 from openai_App import getEnvironmentDataByKey
 
-username = getEnvironmentDataByKey("USERNAME")
-password = getEnvironmentDataByKey("PASSWORD")
-security_token = getEnvironmentDataByKey("SECURITY_TOKEN")
 consumer_key = getEnvironmentDataByKey("CONSUMER_KEY")
 consumer_secret = getEnvironmentDataByKey("CONSUMER_SECRET")
+token_url = getEnvironmentDataByKey("AUTH_TOKEN_URL") # OAuth 2.0 token endpoint
+grant_type = getEnvironmentDataByKey("GRANT_TYPE")
 
-# Combine password and security token
-combined_password_token = password + security_token
-print('toke**'+combined_password_token)
-if not username or not password or not security_token:
+if not consumer_key or not consumer_secret or not token_url:
     raise ValueError("Salesforce credentials are not set in environment variables")
-
-# OAuth 2.0 token endpoint
-token_url = 'https://examtestorg-dev-ed.my.salesforce.com/services/oauth2/token'
 
 # Payload for token request
 payload = {
-    'grant_type': 'client_credentials',
+    'grant_type': grant_type,
     'client_id': consumer_key,
-    'client_secret': consumer_secret,
-    'username': username,
-    'password': combined_password_token
+    'client_secret': consumer_secret
 }
 
 # Request the access token
