@@ -13,6 +13,14 @@ print("consumer_key***"+consumer_key)
 print("consumer_secret***"+consumer_secret)
 print("token_url***"+token_url)
 
+# Set page configuration
+st.set_page_config(
+    page_title="My App",
+    page_icon="🚀",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
+
 if not consumer_key or not consumer_secret or not token_url:
     raise ValueError("Salesforce credentials are not set in environment variables")
 
