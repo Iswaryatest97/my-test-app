@@ -1,0 +1,26 @@
+# config.toml
+[theme]
+primaryColor = "#F63366"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F2F6"
+textColor = "#262730"
+font = "sans serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[global]
+showWarningOnDirectExecution = false
+
+[ui]
+hideTopBar = true
+hideSidebarNav = true
+
+# This hides the "Made with Streamlit" footer
+hideStreamlitMark = true
+
+# This hides the hamburger menu in the top-right corner
+hideHamburgerMenu = true
