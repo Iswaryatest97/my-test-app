@@ -14,6 +14,20 @@ print("consumer_key***"+consumer_key)
 print("consumer_secret***"+consumer_secret)
 print("token_url***"+token_url)
 
+custom_css = """
+<style>
+.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #005290;
+	}
+</style>
+"""
+# Inject the custom CSS into the Streamlit app
+st.markdown(custom_css, unsafe_allow_html=True)
+
 # Set page configuration
 st.set_page_config(
     page_title="My App",
@@ -89,15 +103,6 @@ if submitted:
         st.error('Please fill in all required fields.')
 
 html_code = """
-<style type='text/css'>
-	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Arial", sans-serif;
-	}
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #005290;
-	}
-</style>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
