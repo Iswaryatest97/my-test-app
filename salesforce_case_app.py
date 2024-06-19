@@ -17,24 +17,24 @@ print("token_url***"+token_url)
 custom_css = """
 <style>
 .embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Arial", sans-serif;
-	}
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #005290;
-	}
+    background-color: #005290;
+    font-family: "Arial", sans-serif;
+}
+.embeddedServiceHelpButton .helpButton .uiButton:focus {
+    outline: 1px solid #005290;
+}
 </style>
 """
 # Inject the custom CSS into the Streamlit app
 st.markdown(custom_css, unsafe_allow_html=True)
 
-# Set page configuration
-st.set_page_config(
-    page_title="My App",
-    page_icon="🚀",
-    layout="wide",
-    initial_sidebar_state="collapsed",
-)
+# # Set page configuration
+# st.set_page_config(
+#     page_title="My App",
+#     page_icon="🚀",
+#     layout="wide",
+#     initial_sidebar_state="collapsed",
+# )
 
 if not consumer_key or not consumer_secret or not token_url:
     raise ValueError("Salesforce credentials are not set in environment variables")
