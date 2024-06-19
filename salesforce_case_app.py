@@ -89,7 +89,6 @@ if submitted:
         st.error('Please fill in all required fields.')
 
 html_code = """
-<!DOCTYPE html>
 <html>
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
@@ -100,7 +99,7 @@ html_code = """
 		outline: 1px solid #005290;
 	}
 </style>
-
+<body>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
@@ -153,6 +152,7 @@ html_code = """
 		initESW('https://service.force.com');
 	}
 </script>
+</body>
 </html>
 """
 
