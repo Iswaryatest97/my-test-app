@@ -130,7 +130,7 @@ html_code = """
 </body>
 </html>
 """
-
-components.html(html_code)
+st.write(html_code, unsafe_allow_html=True)
+# components.html(html_code)
 
 
