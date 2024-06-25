@@ -109,7 +109,8 @@ html_content = """
     <title>Streamlit External Script Example</title>
 </head>
 <body>
-    <div id="embeddedMessaging">Loading embedded messaging...</div>
+    testing....
+    <div id="embedded-messaging" class="embedded-messaging"></div>
     <script type='text/javascript'>
         function initEmbeddedMessaging() {
             try {
