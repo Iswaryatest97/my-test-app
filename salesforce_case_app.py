@@ -109,8 +109,7 @@ html_content = """
   <title>My Website with Salesforce Chat</title>
 </head>
 <body>
-  <h1>Welcome to Our Support Page</h1>
-  <p>If you need assistance, please click the chat button.</p>
+    <div id="embedded-messaging" class="embedded-messaging"></div>
   <script type="text/javascript">
     window._snapinsSnippetSettings = {
       // Embedded Service settings
