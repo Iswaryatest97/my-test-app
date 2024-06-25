@@ -104,6 +104,9 @@ if submitted:
 
 html_code = """
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+</head>
 <body>
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
@@ -128,6 +131,6 @@ html_code = """
 </html>
 """
 
-components.html(html_code, unsafe_allow_html=True)
+components.html(html_code)
 
 
