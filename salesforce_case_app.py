@@ -106,32 +106,40 @@ html_content = """
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Streamlit External Script Example</title>
+  <title>My Website with Salesforce Chat</title>
 </head>
 <body>
-    testing....
-    <div id="embedded-messaging" class="embedded-messaging"></div>
-    <script type='text/javascript'>
-        function initEmbeddedMessaging() {
-            try {
-                embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+  <h1>Welcome to Our Support Page</h1>
+  <p>If you need assistance, please click the chat button.</p>
+  <script type="text/javascript">
+    window._snapinsSnippetSettings = {
+      // Embedded Service settings
+    };
+    (function() {
+      var script = document.createElement('script');
+      script.src = 'https://so1714738901949.my.site.com/ESWCustomMessageInApp1719136220263/assets/js/bootstrap.min.js';
+      script.onload = function() {
+        try {
+            embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-                embeddedservice_bootstrap.init(
-                    '00DHu000003oiq4',
-                    'Custom_Message_In_App',
-                    'https://so1714738901949.my.site.com/ESWCustomMessageInApp1719136220263',
-                    {
-                        scrt2URL: 'https://so1714738901949.my.salesforce-scrt.com'
-                    }
-                );
-            } catch (err) {
-                console.error('Error loading Embedded Messaging: ', err);
-            }
-        };
-    </script>
-    <script type='text/javascript' src='https://so1714738901949.my.site.com/ESWCustomMessageInApp1719136220263/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+            embeddedservice_bootstrap.init(
+                '00DHu000003oiq4',
+                'Custom_Message_In_App',
+                'https://so1714738901949.my.site.com/ESWCustomMessageInApp1719136220263',
+                {
+                    scrt2URL: 'https://so1714738901949.my.salesforce-scrt.com'
+                }
+            );
+        } catch (err) {
+            console.error('Error loading Embedded Messaging: ', err);
+        }
+      };
+      document.body.appendChild(script);
+    })();
+  </script>
 </body>
 </html>
+
 """
 
 # Use Streamlit to display the HTML content
