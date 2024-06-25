@@ -128,6 +128,6 @@ html_code = """
 </html>
 """
 
-st.markdown(html_code, unsafe_allow_html=True)
+components.html(html_code, unsafe_allow_html=True)
 
 
