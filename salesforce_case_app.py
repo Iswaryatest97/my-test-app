@@ -103,6 +103,8 @@ if submitted:
         st.error('Please fill in all required fields.')
 
 html_code = """
+<html>
+<body>
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
@@ -122,7 +124,8 @@ html_code = """
 	};
 </script>
 <script type='text/javascript' src='https://so1714738901949.my.site.com/ESWCustomMessageInApp1719136220263/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
+</body>
+</html>
 """
 
 st.markdown(html_code, unsafe_allow_html=True)
