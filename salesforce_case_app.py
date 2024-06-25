@@ -102,36 +102,6 @@ if submitted:
     else:
         st.error('Please fill in all required fields.')
 
-html_code = """
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-<script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-
-			embeddedservice_bootstrap.init(
-				'00DHu000003oiq4',
-				'Custom_Message_In_App',
-				'https://so1714738901949.my.site.com/ESWCustomMessageInApp1719136220263',
-				{
-					scrt2URL: 'https://so1714738901949.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-</script>
-<script type='text/javascript' src='https://so1714738901949.my.site.com/ESWCustomMessageInApp1719136220263/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-</head>
-<body>
-</body>
-
-</html>
-"""
-# st.write(html_code, unsafe_allow_html=True)
-# components.html(html_code)
+components.iframe("/embeddedchat.html", height=500)
 
 
