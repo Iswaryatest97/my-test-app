@@ -106,8 +106,6 @@ html_code = """
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-</head>
-<body>
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
@@ -127,7 +125,10 @@ html_code = """
 	};
 </script>
 <script type='text/javascript' src='https://so1714738901949.my.site.com/ESWCustomMessageInApp1719136220263/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</head>
+<body>
 </body>
+
 </html>
 """
 st.write(html_code, unsafe_allow_html=True)
